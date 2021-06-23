@@ -1,5 +1,10 @@
 {
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
   "dependencies": {
+    "dat.gui": "^0.7.7",
     "three": "^0.129.0",
     "three-orbitcontrols": "^2.110.3"
   }
