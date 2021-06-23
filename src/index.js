@@ -2,17 +2,16 @@ import * as THREE from 'three'
 import OrbitControls from 'three-orbitcontrols'
 import "./style.scss"
 
-export default class Sketch{
-    constructor(options){
+export default class Sketch {
+    constructor(options) {
         this.container = options.dom
         this.time = 0
 
         this.width = this.container.offsetWidth
         this.height = this.container.offsetHeight
-
-
+        
         this.scene = new THREE.Scene()
-        this.camera = new THREE.PerspectiveCamera( 70, this.width / this.height, 0.01, 10 )
+        this.camera = new THREE.PerspectiveCamera(70, this.width / this.height, 0.01, 10)
         this.camera.position.z = 1
 
         this.renderer = new THREE.WebGLRenderer({
@@ -22,16 +21,16 @@ export default class Sketch{
         this.container.appendChild(this.renderer.domElement)
 
         this.controls = new OrbitControls(this.camera, this.renderer.domElement)
-        
+
         this.addObjects()
         this.render()
     }
 
-    resize(){
+    resize() {
 
     }
 
-    addObjects(){
+    addObjects() {
         this.geometry = new THREE.BoxGeometry(0.2, 0.2, 0.2)
         this.material = new THREE.MeshNormalMaterial()
 
@@ -52,9 +51,3 @@ export default class Sketch{
 new Sketch({
     dom: document.querySelector(".container")
 })
-
-
-
-
-
-
