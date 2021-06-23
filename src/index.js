@@ -1,4 +1,5 @@
 import * as THREE from 'three'
+import OrbitControls from 'three-orbitcontrols'
 import "./style.scss"
 
 export default class Sketch{
@@ -20,6 +21,8 @@ export default class Sketch{
         this.renderer.setSize(this.width, this.height)
         this.container.appendChild(this.renderer.domElement)
 
+        this.controls = new OrbitControls(this.camera, this.renderer.domElement)
+        
         this.addObjects()
         this.render()
     }
