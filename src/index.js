@@ -17,7 +17,8 @@ export default class Sketch {
 		this.camera.position.z = 1
 
 		this.renderer = new THREE.WebGLRenderer({
-			antialias: true
+			antialias: true,
+			alpha: true
 		})
 		this.renderer.setSize(this.width, this.height)
 		this.container.appendChild(this.renderer.domElement)
