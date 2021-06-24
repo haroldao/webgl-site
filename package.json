@@ -1,20 +1,27 @@
 {
   "name": "webgl",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html"
   },
-  "dependencies": {
-    "dat.gui": "^0.7.7",
-    "parcel": "^2.0.0-beta.3.1",
-    "three": "^0.129.0",
-    "three-orbitcontrols": "^2.110.3"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haroldao/webgl-site.git"
   },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haroldao/webgl-site/issues"
+  },
+  "homepage": "https://github.com/haroldao/webgl-site#readme",
   "devDependencies": {
-    "cssnano": "^5.0.6",
-    "parcel-bundler": "^1.12.5",
-    "postcss": "^8.3.5"
+    "parcel-bundler": "^1.12.5"
+  },
+  "dependencies": {
+    "three": "^0.129.0"
   }
 }
